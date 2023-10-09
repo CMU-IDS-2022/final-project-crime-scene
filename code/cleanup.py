@@ -57,7 +57,7 @@ def prep_city_dataset():
     df.isnull().sum(axis = 0)
     df = df[['state_abbr','city_name' ,'metric_name', 'est', 'data_yr_type','group_name']]
     df= df.reset_index()
-    df = df.drop('index', 1)
+    # df = df.drop('index', 1)
     df = df[df['est'].notna()]
     return df
     
